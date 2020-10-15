@@ -24,13 +24,6 @@ module.exports = function(app) {
         },
         handlebars: allowInsecurePrototypeAccess(Handlebars)
     }).engine)
-    // app.engine('handlebars', exphbs.create({
-    //     helpers: {
-    //         timeago: function(timestamp) {
-    //             return moment(timestamp).startOf('minute').fromNow();
-    //         }
-    //     }
-    // }).engine);
     app.set('view engine', 'handlebars');
 
     app.use(morgan('dev'));
